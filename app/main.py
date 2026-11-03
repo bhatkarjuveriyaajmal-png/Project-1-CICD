@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import logging
 import os
 
@@ -15,10 +16,19 @@ logger = logging.getLogger(__name__)
 
 
 @app.get("/")
+=======
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route("/")
+>>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
 def home():
     return jsonify({
         "message": "Welcome to my DevOps CI/CD Project!",
         "status": "success",
+<<<<<<< HEAD
         "project": "Project-1-CICD",
         "version": "1.0.0"
     }), 200
@@ -57,3 +67,18 @@ def greet():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
     app.run(host="0.0.0.0", port=port, debug=False)
+=======
+        "project": "Project-1-CICD"
+    })
+
+
+@app.route("/health")
+def health():
+    return jsonify({
+        "status": "healthy"
+    })
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
+>>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3

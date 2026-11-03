@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 .venv
 .git
 __pycache__
 .pytest_cache
 .env
 *.pyc
+=======
+.venv/
+.git/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+>>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3

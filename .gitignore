@@ -3,6 +3,9 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .env
+<<<<<<< HEAD
 *.log
 .coverage
 htmlcov/
+=======
+>>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
