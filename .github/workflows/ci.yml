@@ -8,12 +8,8 @@ on:
     branches: [main, master]
 
 jobs:
-<<<<<<< HEAD
-  test:
-    name: Run Python Tests
-=======
   test-and-build:
->>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
+    name: Run Tests and Build Docker Image
     runs-on: ubuntu-latest
 
     steps:
@@ -32,9 +28,6 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
-<<<<<<< HEAD
-=======
 
       - name: Build Docker image
         run: docker build -t project-1-cicd:ci .
->>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
