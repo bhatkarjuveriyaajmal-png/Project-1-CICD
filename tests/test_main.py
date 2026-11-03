@@ -6,28 +6,20 @@ from app.main import app
 class TestFlaskApp(unittest.TestCase):
 
     def setUp(self):
-<<<<<<< HEAD
         app.config["TESTING"] = True
-=======
->>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
         self.client = app.test_client()
 
     def test_home_page(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-<<<<<<< HEAD
         self.assertEqual(
             response.get_json()["project"],
             "Project-1-CICD"
         )
-=======
-        self.assertIn(b"Welcome to my DevOps CI/CD Project!", response.data)
->>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
 
     def test_health_endpoint(self):
         response = self.client.get("/health")
         self.assertEqual(response.status_code, 200)
-<<<<<<< HEAD
         self.assertEqual(
             response.get_json()["status"],
             "healthy"
@@ -55,9 +47,6 @@ class TestFlaskApp(unittest.TestCase):
             query_string={"name": "A" * 51}
         )
         self.assertEqual(response.status_code, 400)
-=======
-        self.assertIn(b"healthy", response.data)
->>>>>>> 86daa463c7aa66dc5603dfa0c0e8ea7f96c1d1c3
 
 
 if __name__ == "__main__":
